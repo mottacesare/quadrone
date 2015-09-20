@@ -11,18 +11,38 @@
 .div-menu{
 	width:100%;
 }
-.div-menu-container{
-	width: 500px;
-	margin-left: auto ;
-	margin-right: auto ;
-}
-.div-menu-image{
-	float: left;
+.div-menu-logo{
 	position:absolute;
 	top:0;
 	left:0;
 	z-index:-99;
 	opacity: 0.7;
+}
+.div-menu-image-top{
+	position:absolute;
+	width:33.3px;
+	height:50px;
+	top:0;
+	right:0;
+	z-index:-99;
+	opacity: 0.2;
+}
+.div-menu-image-bottom{
+	position:absolute;
+	width:118.1px;
+	height:176.4px;
+	bottom:0;
+	right:0;
+	z-index:-99;
+	opacity: 0.2;
+}
+.div-menu-title{
+	
+}
+.div-menu-container{
+	width: 600px;
+	margin-left: auto ;
+	margin-right: auto ;
 }
 .div-menu-item{
 	float: left;
