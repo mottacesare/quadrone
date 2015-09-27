@@ -1,5 +1,5 @@
 <?php
-
+//
 if(!function_exists("pr") && !function_exists("pre")) { 
 	//print formatted array
 	function pr($str){
@@ -30,6 +30,7 @@ function addHeader($page){
 		<head>
 		<title>Olio Quadrone</title>
 		<link rel=\"stylesheet\" href=\"css/style.css\">
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		</head>
 		
 		<body style=\"width:100%;\">
@@ -69,16 +70,40 @@ function addFooter(){
 }
 
 function addInfo(){
+	//
+	if($_POST["g-recaptcha-response"] && $_POST["email"]){
+		//
+		$mail = new PHPMailer(true);
+		//
+		$mail->IsSMTP(); // telling the class to use SMTP
+		$mail->SMTPAuth = true; // enable SMTP authentication
+		$mail->SMTPSecure = "ssl"; // sets the prefix to the servier
+		$mail->Host = "smtp.gmail.com"; // sets GMAIL as the SMTP server
+		$mail->Port = 465; // set the SMTP port for the GMAIL server
+		$mail->Username = "aldo.rotunno@gmail.com"; // GMAIL username
+		$mail->Password = "ghepardo"; // GMAIL password
+		//
+		//Typical mail data
+		$mail->AddAddress("rotunno.aldo@gmail.com", "Aldo");
+		$mail->SetFrom("info@quadrone.it","OLIO");
+		$mail->Subject = "[ OLIO QUADRONE ]";
+		$mail->Body = "La mail ".$_POST["email"]." ha richiesto informazioni sull'olio";
+		//
+		$mail->Send();
+	}
+	//
 	echo "	<div class=\"div-info\">
-			Saremo presto OnLine</br>Lascia la tua mail per ricevere le notre Info
+			Psst... Saremo presto OnLine</br>Lasciaci la tua mail per rimanere aggiornato...
 			
 			<div id=\"completeform\">
 				
 				<form id=\"inviteform\" name=\"inviteform\" method=\"post\" action=\"#\">
 					<input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Scrivi il tuo indirizzo E-mail\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\">
 					
+					<div id=\"captcha\" class=\"g-recaptcha\" data-sitekey=\"6Lc7pw0TAAAAAFwzuXRMJG3LnvEaYt7NUPZwnc-a\"></div>
+					
 					<div id=\"btnwrap\">
-						<button name=\"btnSend\" id=\"btnSend\" type=\"submit\" value=\"Send\">Conferma</button>
+						<button name=\"btnSend\" id=\"btnSend\" type=\"submit\" value=\"true\">Conferma</button>
 					</div>
 					
 				</form>

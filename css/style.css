@@ -58,20 +58,43 @@
 	font-family:"champagne_limousines_bold";
 }
 .div-info{
+	margin-top: 120px;
 	width: 100%;
 	float: left;
-	margin-top: 40px;
 	font-size: 3em;
 	font-family:"champagne_limousines";
 	text-align: center;
 	color: Tan;
 }
 
+form #email {
+	margin-top: 60px;
+	width: 305px;
+	background-color: #fff;
+	border: 1px solid olive;
+	color: olive;
+	font-size: 0.5em;
+	padding: 7px 11px 6px;
+	margin-bottom: 15px;
+}
+
+form #captcha{
+	width: 305px;
+	margin-left: auto ;
+	margin-right: auto ;
+	margin-bottom: 10px;
+}
+
+form button{
+	height: 1.6em;
+	width: 305px;
+}
+
 form button#btnSend {
 	font-size: 0.6em;
 	font-family: "champagne_limousines";
 	text-shadow: none;
-	color: black;
+	color: white;
 	background: olive;
 	border:1px solid #00498a;
 	border-radius:5px;
@@ -80,19 +103,10 @@ form button#btnSend {
 }
 
 form button#btnSend:hover {
-	background: white;
-	box-shadow: 0 0 5px 1px rgba(0,110,255,0.55);
+	box-shadow: 0 0 5px 1px olive;
 	cursor: pointer;
 }
 
-form #email {
-	width: 290px;
-	background-color: #fff;
-	border: 1px solid olive;
-	color: olive;
-	font-size: 0.4em;
-	padding: 7px 11px 6px;
-	margin-bottom: 15px;
-}
+
 
 
