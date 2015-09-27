@@ -17,11 +17,11 @@ if(!function_exists("pr") && !function_exists("pre")) {
 function addHeader($page){
 	$page_arr=array(
 		"Home"=>"index.php",
-		"Chi Siamo"=>"who.php",
+		"Chi Siamo"=>"chi_siamo.php",
 		"News"=>"news.php",
-		"Eventi"=>"event.php",
-		"Galleria"=>"gallery.php",
-		"Contattaci"=>"contact.php",
+		"Eventi"=>"eventi.php",
+		"Galleria"=>"galleria.php",
+		"Contattaci"=>"contattaci.php",
 	);
 	//
 	echo "	<!DOCTYPE html>
@@ -48,45 +48,23 @@ function addHeader($page){
 		echo "			<a href=\"$pa_v\"><div class=\"div-menu-item ".($pa_v==$page?"div-menu-item-selected":"")."\">$pa_k</div></a>";
 	}
 	//
-	/*echo			"</div>
+	echo			"</div>
 			</div>
 			
-			<div class=\"div-menu-image-top\">
+			<!--<div class=\"div-menu-image-top\">
 				<img src=\"image/cucchiaio.jpg\"/>
 			</div>
 			
 			<div class=\"div-menu-image-bottom\">
 				<img src=\"image/bicchiere.jpg\"/>
-			</div>";*/
-	echo "	</div>";
+			</div>-->";
 }
 
 function addFooter(){
-	echo "
+	echo "	</div>
 		</body>
 		
 		</html>";
 }
-
-function addInfo(){
-	echo "	<div class=\"div-info\">
-			Saremo presto OnLine</br>Lascia la tua mail per ricevere le notre Info
-			
-			<div id=\"completeform\">
-				
-				<form id=\"inviteform\" name=\"inviteform\" method=\"post\" action=\"#\">
-					<input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Scrivi il tuo indirizzo E-mail\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\">
-					
-					<div id=\"btnwrap\">
-						<button name=\"btnSend\" id=\"btnSend\" type=\"submit\" value=\"Send\">Conferma</button>
-					</div>
-					
-				</form>
-				
-			</div>
-			
-		</div>";
-}
-
 
 ?>
