@@ -57,3 +57,42 @@
 	border-bottom: 1px solid olive;
 	font-family:"champagne_limousines_bold";
 }
+.div-info{
+	width: 100%;
+	float: left;
+	margin-top: 40px;
+	font-size: 3em;
+	font-family:"champagne_limousines";
+	text-align: center;
+	color: Tan;
+}
+
+form button#btnSend {
+	font-size: 0.6em;
+	font-family: "champagne_limousines";
+	text-shadow: none;
+	color: black;
+	background: olive;
+	border:1px solid #00498a;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+form button#btnSend:hover {
+	background: white;
+	box-shadow: 0 0 5px 1px rgba(0,110,255,0.55);
+	cursor: pointer;
+}
+
+form #email {
+	width: 290px;
+	background-color: #fff;
+	border: 1px solid olive;
+	color: olive;
+	font-size: 0.4em;
+	padding: 7px 11px 6px;
+	margin-bottom: 15px;
+}
+
+

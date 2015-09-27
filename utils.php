@@ -48,7 +48,7 @@ function addHeader($page){
 		echo "			<a href=\"$pa_v\"><div class=\"div-menu-item ".($pa_v==$page?"div-menu-item-selected":"")."\">$pa_k</div></a>";
 	}
 	//
-	echo			"</div>
+	/*echo			"</div>
 			</div>
 			
 			<div class=\"div-menu-image-top\">
@@ -57,14 +57,36 @@ function addHeader($page){
 			
 			<div class=\"div-menu-image-bottom\">
 				<img src=\"image/bicchiere.jpg\"/>
-			</div>";
+			</div>";*/
+	echo "	</div>";
 }
 
 function addFooter(){
-	echo "	</div>
+	echo "
 		</body>
 		
 		</html>";
 }
+
+function addInfo(){
+	echo "	<div class=\"div-info\">
+			Saremo presto OnLine</br>Lascia la tua mail per ricevere le notre Info
+			
+			<div id=\"completeform\">
+				
+				<form id=\"inviteform\" name=\"inviteform\" method=\"post\" action=\"#\">
+					<input type=\"email\" name=\"email\" id=\"email\" placeholder=\"Scrivi il tuo indirizzo E-mail\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\">
+					
+					<div id=\"btnwrap\">
+						<button name=\"btnSend\" id=\"btnSend\" type=\"submit\" value=\"Send\">Conferma</button>
+					</div>
+					
+				</form>
+				
+			</div>
+			
+		</div>";
+}
+
 
 ?>
